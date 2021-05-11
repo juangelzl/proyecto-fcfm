@@ -1,0 +1,33 @@
+<div class="m-5 container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Alumnos
+
+      </h3>
+      <div class="card-body">
+        <table class="table table-hover">
+          <thead>
+            <tr class="text-center">
+              <th>ID</th>
+              <th>Usuario</th>
+              <th>Nombre</th>
+              <th>Matricula</th>
+              <th>Contraseña</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr  *ngFor="let alumno of alumnos"  class="text-center">
+              <td>{{alumno.id}}</td>
+              <td>{{alumno.usuario}}</td>
+              <td>{{alumno.nombre}}</td>
+              <td>{{alumno.matricula}}</td>
+              <td>{{alumno.password}}</td>
+              <td><button class="btn btn-primary mx-4">Editar</button>
+              <button (click)="Delete(alumno)" class="btn btn-danger">Eliminar</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
