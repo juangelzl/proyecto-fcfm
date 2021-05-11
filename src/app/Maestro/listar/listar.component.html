@@ -24,7 +24,8 @@
               <td>{{maestro.nombre}}</td>
               <td>{{maestro.tipo}}</td>
               <td>{{maestro.estatus}}</td>
-              <td><button class="btn btn-primary mx-4">Editar</button>
+              <td>
+              <button (click)="Editar(maestro)" class="btn btn-danger">Editar</button>                
               <button (click)="Delete(maestro)" class="btn btn-danger">Eliminar</button></td>
             </tr>
           </tbody>

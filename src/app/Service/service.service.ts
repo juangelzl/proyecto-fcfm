@@ -39,4 +39,10 @@ export class ServiceService {
   deleteAlumno(alumno:Alumno){
     return this.http.delete<Alumno>(this.Url+"alumnos/"+alumno.id)
   }
+  getMaestroId(id:Number){
+    return this.http.get<Maestro>(this.Url+"/"+id);
+  }
+  updateMaestro(maestro:Maestro){
+    return this.http.put<Maestro>(this.Url+'/'+ maestro.id,maestro);
+  }
 }

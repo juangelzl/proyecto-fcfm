@@ -26,5 +26,9 @@ export class ListarComponent implements OnInit {
       alert("Maestro Eliminado mmm típico")
     })
   }
+  Editar(maestro:Maestro):void{
+    localStorage.setItem("id",maestro.id.toString());
+    this.router.navigate(["edit"]);
+  }
 
 }
